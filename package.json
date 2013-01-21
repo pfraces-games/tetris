@@ -1,0 +1,17 @@
+{
+  "name": "tetris",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {    
+    "should": "*",
+    "dal": "*",
+    "jslib": "*"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependences": {
+    "dal": "*",
+    "jslib": "*"
+  }
+}
