@@ -3,7 +3,7 @@
   "repo": "pfraces/tetris",
   "description": "tetris component for the browser",
   "version": "0.1.0",
-  "dependences": {
+  "dependencies": {
     "pfraces/gen": "*"
   },
   "scripts": ["index.js"],
