@@ -6,7 +6,7 @@ var tetris = module.exports = function (config) {
 };
 
 var private = {
-  cursor = { x: 0, y: 0 }
+  cursor: { x: 0, y: 0 }
 };
 
 var Tetris = function (config) {
