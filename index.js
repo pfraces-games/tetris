@@ -1,7 +1,7 @@
 var gen = require('gen'),
     engine;
 
-var tetris = module.exports = function (config) {
+var module.exports = function (config) {
   return new Tetris(config);
 };
 
