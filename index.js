@@ -19,6 +19,10 @@ Tetris.prototype.start = function () {
   engine.draw.cell(private.cursor);
 };
 
+Tetris.prototype.keymap = function (keymap) {
+  engine.keymap = keymap;
+};
+
 Tetris.prototype.up = function () {
   /* player.move.up(); // teleport
      player.go.up(); // path finding */
