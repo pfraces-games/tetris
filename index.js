@@ -1,5 +1,4 @@
-var gen = require('gen'),
-    engine;
+var gen = require('gen');
 
 var module.exports = function (config) {
   return new Tetris(config);
@@ -9,12 +8,17 @@ var private = {
   cursor: { x: 0, y: 0 }
 };
 
+var engine;
+/* var player; */
+
 var Tetris = function (config) {
   engine = gen(config);
 };
 
 Tetris.prototype.start = function () {
-  engine.draw.board();
+  /* player = engine.create.entity(); */
+  /* engine.start() debe dibujar entidades */
+  engine.start();
   engine.map.at(private.cursor).color = 'blue';
   engine.draw.cell(private.cursor);
 };
