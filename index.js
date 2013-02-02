@@ -1,6 +1,6 @@
 var gen = require('gen');
 
-var module.exports = function (config) {
+module.exports = function (config) {
   return new Tetris(config);
 };
 
