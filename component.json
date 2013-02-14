@@ -2,9 +2,9 @@
   "name": "tetris",
   "repo": "pfraces/tetris",
   "description": "tetris component for the browser",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "dependencies": {
-    "pfraces/gen": "*"
+    "genjs/gen": "*"
   },
   "scripts": ["index.js"],
   "keywords": ["tetris"],
