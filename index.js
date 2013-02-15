@@ -10,21 +10,21 @@ var Tetris = function (config) {
 };
 
 Tetris.prototype.keymap = function (keymap) {
-  this.engine.keymap(keymap);
+  tetris.engine.keymap(keymap);
 };
 
 Tetris.prototype.up = function () {
-  this.player.move.up();
+  tetris.player.move.up();
 };
 
 Tetris.prototype.down = function () {
-  this.player.move.down();
+  tetris.player.move.down();
 };
 
 Tetris.prototype.left = function () {
-  this.player.move.left();
+  tetris.player.move.left();
 };
 
 Tetris.prototype.right = function () {
-  this.player.move.right();
+  tetris.player.move.right();
 };
