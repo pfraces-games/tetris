@@ -6,7 +6,7 @@ var tetris = module.exports = function (config) {
 
 var Tetris = function (config) {
   this.engine = gen(config);
-  this.player = engine.actor();
+  this.player = this.engine.actor();
 };
 
 Tetris.prototype.keymap = function (keymap) {
