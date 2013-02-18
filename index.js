@@ -1,5 +1,6 @@
 var gen = require('gen'),
-    shortcut = require('shortcut');
+    shortcut = require('shortcut'),
+    random = require('random');
 
 module.exports = function (config) {
   return new Tetris(config);
@@ -7,7 +8,7 @@ module.exports = function (config) {
 
 var Tetris = function (config) {
   this.engine = gen(config);
-  this.player = this.engine.actor({ x: 0, y: 0 });
+  this.player = this.engine.actor(0, 0, nextTetrimino());
 
   var player = this.player;
 
@@ -54,3 +55,37 @@ Tetris.prototype.keymap = function (keymap) {
     });
   });
 };
+
+var nextTetrimino = (function () {
+  var tetriminos = [
+    [
+      [1,1,1,1]
+    ],
+    [
+      [1,0,0],
+      [1,1,1]
+    ],
+    [
+      [0,0,1],
+      [1,1,1]
+    ],
+    [
+      [1,1],
+      [1,1]
+    ],
+    [
+      [0,1,1],
+      [1,1,0]
+    ],
+    [
+      [1,1,0],
+      [0,1,1]
+    ],
+    [
+      [0,1,0],
+      [1,1,1]
+    ]
+  ];
+
+  return random(tetriminos).pick;
+})();
