@@ -5,24 +5,25 @@ module.exports = function (config) {
 };
 
 var Tetris = function (config) {
-  var self = this;
   this.engine = gen(config);
   this.player = this.engine.actor({ x: 0, y: 0 });
 
+  var player = this.player;
+
   this.up = function () {
-    self.player.move.up();
+    player.actions.set('up', player.move.up);
   };
 
   this.down = function () {
-    self.player.move.down();
+    player.actions.set('down', player.move.down);
   };
 
   this.left = function () {
-    self.player.move.left();
+    player.actions.set('left', player.move.left);
   };
 
   this.right = function () {
-    self.player.move.right();
+    player.actions.set('right', player.move.right);
   };
 };
 
