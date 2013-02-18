@@ -7,7 +7,7 @@ module.exports = function (config) {
 
 var Tetris = function (config) {
   this.engine = gen(config);
-  this.player = this.engine.actor({ x: 0, y: 0 });
+  this.player = this.engine.actor({ x: 0, y: 0 }, config.fg);
 
   var player = this.player;
 
