@@ -12,8 +12,7 @@ var Tetris = function (config) {
 
   var player = this.player;
 
-  this.playPause = function () {
-  };
+  this.playPause = this.engine.playPause;
 
   this.turnClockwise = function () {
   };
