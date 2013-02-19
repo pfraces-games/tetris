@@ -12,15 +12,19 @@ var Tetris = function (config) {
 
   var player = this.player;
 
-  this.up = function (enable) {
-    if (enable) {
-      player.actions.set('up', player.move.up);
-    } else {
-      player.actions.del('up');
-    }
+  this.playPause = function () {
   };
 
-  this.down = function (enable) {
+  this.turnClockwise = function () {
+  };
+
+  this.turnCounterClockwise = function () {
+  };
+
+  this.hardDrop = function () {
+  };
+
+  this.softDrop = function (enable) {
     if (enable) {
       player.actions.set('down', player.move.down);
     } else {
