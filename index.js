@@ -7,13 +7,14 @@ module.exports = function (config) {
 };
 
 var Tetris = function (config) {
+  var tetris = this;
   this.engine = gen(config);
   this.player = this.engine.actor(0, 0, nextTetrimino());
 
   var player = this.player;
 
   this.playPause = function (keydown) {
-    this.engine.playPause();
+    tetris.engine.playPause();
   };
 
   this.turnClockwise = function () {
