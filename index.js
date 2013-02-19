@@ -12,7 +12,9 @@ var Tetris = function (config) {
 
   var player = this.player;
 
-  this.playPause = this.engine.playPause;
+  this.playPause = function (keydown) {
+    this.engine.playPause();
+  };
 
   this.turnClockwise = function () {
   };
@@ -23,24 +25,24 @@ var Tetris = function (config) {
   this.hardDrop = function () {
   };
 
-  this.softDrop = function (enable) {
-    if (enable) {
+  this.softDrop = function (keydown) {
+    if (keydown) {
       player.actions.set('down', player.move.down);
     } else {
       player.actions.del('down');
     }
   };
 
-  this.left = function (enable) {
-    if (enable) {
+  this.left = function (keydown) {
+    if (keydown) {
       player.actions.set('left', player.move.left);
     } else {
       player.actions.del('left');
     }
   };
 
-  this.right = function (enable) {
-    if (enable) {
+  this.right = function (keydown) {
+    if (keydown) {
       player.actions.set('right', player.move.right);
     } else {
       player.actions.del('right');
