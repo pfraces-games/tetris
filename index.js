@@ -14,7 +14,9 @@ var Tetris = function (config) {
   var player = this.player;
 
   this.playPause = function (keydown) {
-    tetris.engine.playPause();
+    if (keydown) {
+      tetris.engine.playPause();
+    }
   };
 
   this.turnClockwise = function () {
