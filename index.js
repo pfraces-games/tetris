@@ -13,10 +13,8 @@ var Tetris = function (config) {
 
   var player = this.player;
 
-  this.playPause = function (keydown) {
-    if (keydown) {
-      tetris.engine.playPause();
-    }
+  this.playPause = function () {
+    tetris.engine.playPause();
   };
 
   this.turnClockwise = function () {
@@ -28,37 +26,22 @@ var Tetris = function (config) {
   this.hardDrop = function () {
   };
 
-  this.softDrop = function (keydown) {
-    if (keydown) {
-      player.actions.set('down', player.move.down);
-    } else {
-      player.actions.del('down');
-    }
+  this.softDrop = function () {
+    player.actions.add(player.move.down);
   };
 
-  this.left = function (keydown) {
-    if (keydown) {
-      player.actions.set('left', player.move.left);
-    } else {
-      player.actions.del('left');
-    }
+  this.left = function () {
+    player.actions.add(player.move.left);
   };
 
-  this.right = function (keydown) {
-    if (keydown) {
-      player.actions.set('right', player.move.right);
-    } else {
-      player.actions.del('right');
-    }
+  this.right = function () {
+    player.actions.add(player.move.right);
   };
 };
 
 Tetris.prototype.keymap = function (keymap) {
   Object.keys(keymap).forEach(function (key) {
     shortcut.on(key, function () {
-      keymap[key](true);
-    });
-    shortcut.onEnd(key, function () {
       keymap[key]();
     });
   });
